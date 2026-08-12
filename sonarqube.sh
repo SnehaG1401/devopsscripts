@@ -44,3 +44,15 @@ su - sonar -c "/opt/sonarqube-8.9.6.50800/bin/linux-x86-64/sonar.sh restart"
 echo "=== Installation Completed Successfully! ==="
 echo "Wait 20 seconds for initialization, then access: http://<YOUR_EC2_PUBLIC_IP>:9000"
 echo "Default Credentials -> User: admin | Password: admin"
+
+then -------------------------------------
+# 1. Create and open the file
+nano install_sonarqube.sh
+
+# 2. Paste the script content above, then save (Ctrl+O, Enter, Ctrl+X)
+
+# 3. Make it executable
+chmod +x install_sonarqube.sh
+
+# 4. Run as root
+sudo ./install_sonarqube.sh
